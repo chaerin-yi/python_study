@@ -1,0 +1,134 @@
+def a_rectangle_area(): # 매개변수 X , 반환값 X
+    print(5 * 7)
+def b_rectangle_area(x, y): # 매개변수 O , 반환값 X
+    print(x * y)
+def c_rectangle_area(): # 매개변수 X , 반환값 O
+    print(5 * 7)
+def d_rectangle_area(x, y): # 매개변수 O , 반환값 O
+    print(x * y)
+
+
+a_rectangle_area()
+a_rectangle_area(5, 7)
+print(a_rectangle_area())
+print(b_rectangle_area(5, 7))
+
+
+def f(x):
+    y=x
+    x=5
+    return y*y
+
+x=3
+print(f(x))
+print(x)
+
+def f(x):
+    y = x
+    print('x의 값이 변하기 전 id: ', id(x))
+    x = 5
+    print('x의 값이 변한 다음 id: ', id(x))
+    return y * y
+    
+x = 3       #전역 변수 x 
+print(f(x))  #힘수 f(x) 호출
+print('전역 변수 x의 깂: ', x)
+print('전역 변수 x의 id: ', id(x))
+
+def func(c):
+    print('c before change: ', id(c))
+    c = 2
+    print('c after change: ', id(c))
+    
+    a = 1
+    print('a before function: ', id(a))
+    b = 2
+    print('b before function: ', id(b))
+    func(a)
+    
+    
+    
+    def func(arr): #함수가 실행되면 arr도 a와 같은 객체 ([1,2,3,4])를 가리킨다.
+    
+        arr.append(5) #리스트는 mutable하므로 동일한 id의 리스트에 5가 추가된다.
+        print('리스트의 arr의 id: ', id(arr))
+        print(arr)
+    
+    a = [1,2,3,4]
+    print('리스트 a의 id: ', id(a))
+    func(a)
+    
+    
+    def func(arr):
+        
+        arr = [5, 6]     #새로운 객체 arr 생성
+        print('리스트 arrd의 id: ', id(arr))
+        
+    a = [1,2,3,4]
+    print('리스트의 a의 id: ', id(a))
+    func(a)
+    
+    
+    
+    def func(arr):
+        print("arr의 값: ", arr)
+        arr = [5, 6]     #새로운 객체 arr 생성
+        print('리스트 arrd의 id: ', id(arr))
+        
+    a = [1,2,3,4]
+    print('리스트의 a의 id: ', id(a))
+    func(a)
+    
+    
+    def spam(eggs): # 함수안에서 ham -> eggs로 바뀐다.
+        eggs.append(1)  # 기존 객체의 주소값에 [1] 추가
+        print(eggs)
+        print(id(eggs))
+        print(ham)
+        print(id(ham))
+        eggs = [2, 3]   # 새로운 객체(리스트) 생성, ham과 eggs가 다른 주소를 가지게 된다.
+        print(eggs)
+        print(id(eggs))
+        print(ham)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+        print(id(ham))
+
+    ham = [0] # ham 리스트 생성
+    # spam에 ham을 인수로 넣는다. 이때 함수 안에서는 이름이 ham에서 eggs로 바뀐다.
+    # ham과 eggs는 함수의 호출방식이 객체 호출이므로 같은 주소를 공유한다.
+    # 2행의 eggs.append(1)에 의해 해당 리스트에 1이 추가되면, ham과 eggs 모두 영향을 받는다.
+    spam(ham)
+    print(ham)
+    
+    def sum(num1, num2):
+        return num1 + num2
+    print(sum(1, 1))
+    
+    
+    print('6인조 걸그룹')
+    print('apink1.py 파일이 실행되었다.')
+    
+    print(__name__)
+    
+    
+    if __name__ == '__main__':
+        print('6인조 걸그룹')
+        print('apink2.py 파일이 실행되었다.')
+        
+    print(__name__)
+
+    #apink1_import.py
+    import apink1
+
+    #apink2_import.py
+    import apink2
+    
+    print(__name__)
+    
+    if __name__ == "__main__":
+        print("나는 __main__ 이다.")
+    
+    else:
+        print("나는 __main__ 이 아니다.")
+        print(__name__)
+        
+    
