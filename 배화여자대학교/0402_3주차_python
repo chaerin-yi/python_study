@@ -1,0 +1,110 @@
+age = 25
+if(age > 25):
+    print("senior")
+elif age > 20 :
+    print("adult")
+else : 
+    print("young")
+    
+    
+count = int(input("정수를 입력합니다. "))
+if count >= 10 : 
+    print("다시 처음부터 시작합니다.")
+    print("="*25)
+else:
+     count = count +1
+     print("다음 단계가 실행됩니다.")
+
+1 <= 2 < 10
+
+1 <= 2 and 2 < 10
+
+1 <= 100 < 10
+
+1 <= 100 and 100 < 10
+
+a=2
+b=0
+c=5
+d=True
+
+a and b
+# a and b의 경우, a = 2이므로 참이다. and 연산사에서는 둘 모두 참이여야 참을 반환하는데, a가 참이므로 결과는 b에 달려있다.
+# 즉, b가 참이면 참이 나올 것이고, 거짓이라면 거짓을 반환한다. 파이썬은 굳이 b값을 확인하지 않고 b의 값인 0을 반환한다
+# Out : 0
+
+a and c
+# a and c에서도 마찬가지고 a가 참이므로 생각하지 앟고 c의 값인 5를 출력한다.
+# Out : 5 
+
+b and d
+# b and d의 경우에서는 첫번째 값인 b가 0, False를 나타낸다.
+# and 연산자는 둘 다 참이여야 True를 반환할텐데, 처음부터 거짓이 나왔으므로 두번째 값은 보지 않고
+# 거짓을 가리키고 있는 앞의 값 b를 출력해버린다.
+# Out : 0
+
+a or c
+# and 연산자와 똑같은 방법으로 값을 변환한다. a or c에서 a가 2의 값으로 참이다.
+# or 연산자는 둘 중 하나만 참이면 참을 반환하는데, 첫번째 값부터 참이 나왔으므로,
+# 두번째 값은 보지도 않고 첫번재 값을 반환한다.
+# Out : 2
+
+score = int(input("Enter your score: "))
+
+if score >= 90: grade = 'A' # 90 이상일 경우 A 
+elif score >= 80: grade = 'B' # 80 이상일 경우 B
+elif score >= 70: grade = 'C' # 70 이상일 경우 C
+elif score >= 60: grade = 'D' # 60 이상일 경우 D
+else: grade = 'F' # 모든 조건에 만족하지 못할 경우 F
+
+print(grade)
+
+
+score = int(input("Enter your score: "))
+
+if score >= 90:
+    grade = 'A'
+if score >= 80:
+    grade = 'B'
+if score >= 70:
+    grade = 'C'
+if score >= 60:
+    grade = 'D'
+if score < 60:
+    grade = 'F'
+    
+print(grade)
+
+
+print("당신이 태어난 년도를 입력하세요. :")
+birth_year = input() # 사용자 입력을 birth_year 변수에 할
+age = 2022 - int(birth_year) + 1
+
+if age <= 26 and age >= 20:
+    print("대학생")
+elif age < 20 and age >= 17:
+    print("고등학생")
+elif age < 17 and age >= 14:
+    print("중학생")
+elif age < 14 and age >= 8:
+    print("초등학생")
+else :
+    print("학생이 아닙니다.")
+
+# for문은 몇 번 반복할 때 많이 사용하고, while문은 언제까지 반복할 때 많이 사용
+for looper in [1,2,3,4,5]:
+    print("hello")
+    print(looper)
+    
+for i in 'abcdefg':
+    print(i)
+
+for i in ['americano', 'Latte', "Frappuccino"]:
+    print(i)
+
+for i in range(1, 10, 2):
+    print(i)
+
+
+
+
