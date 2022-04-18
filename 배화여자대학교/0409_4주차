@@ -1,0 +1,87 @@
+for i in range(10):
+    if i == 5: break # i가 5가 되면 반복 종료
+    print(i)
+print("End of Program")#반복 종료 후 "End of Program" 출력
+
+
+for i in range(10):
+    if i == 5: continue # i가 5가 되면 반복 종료
+    print(i)
+print("End of Program") #반복 종료 후 "End of Program" 출력
+
+
+for i in range(10):
+    print(i)
+else: #else 문은 어떤 조건이 완전히 끝났을 때 한 번
+    print("End of Program")
+    
+    
+print("구구단 몇단을 계산하겠습니까")
+user_input = input()
+print("구구단",user_input,"단을 계산한다")
+int_input = int(user_input)
+for i in range(1,10):
+    result = int_input * i
+    print(user_input,"x",i,"=",result)
+    
+sentence = "012345"
+reverse_sentence = ' '
+for char in sentence:
+    reverse_sentence = char + reverse_sentence # 
+    print(reverse_sentence)
+    
+decimal = 10
+result = ''
+while(decimal > 0):
+    remainder = decimal % 2 #10진수를 2로 나눈 나머지
+    decimal = decimal // 2 #10진수를 2로 나눈 몫
+    print(decimal)
+    result = str(remainder) + result #뒤에 들어온 것이 앞에 추가된다.
+    print(result)
+    
+import random
+guess_number = random.randint(1, 100)
+print("숫자를 맞혀보세요.")
+users_input = int(input())
+while (users_input is not guess_number):
+    if users_input > guess_number:
+        print("숫자가 너무 큽니다.")
+    else:
+        print("숫자가 너무 작습니다.")
+    users_input = int(input())
+else:
+    print("정답입니다.","입력한 숫자는",users_input,"입니다.")
+    
+print("구구단 몇 단을 계산할까요?(1~9)")
+x = 1; # while문이 무조건 한번은 실행되어야 하므로 x != 0 (x is not 0)을 만족하도록 x = 1 할당
+while(x != 0): # x is not 0을 만족하면 반복문 실행
+    x = int(input())
+    if x == 0: break #1) x에 0이 할당되었을 때 프로그램 종료 -> 14 line 수행 -> 프로그램 종료
+    if not (1 <= x <= 9): #2) x가 1에서 9사이의 숫자가 아닌 경우 (6~8line)
+        print("잘못입력하셨습니다")
+        continue #while문의 처음으로 이동시킨다.
+    else: #3)위 두 조건을 만족하지 않았을 때, 1~9 숫자가 입력되었을 때 (9~13line)
+        print("구구단" + str(x)+"단을 계산합니다")
+        for i in range(1,10): # 중첩반복
+            print(str(x) + "x" + str(i) + "="+ str(x*i))
+        print("구구단 몇 단을 계산할까요(1~9)")
+    print("구구단 게임을 종료합니다.")
+   
+kor_score = [40,80,20,100,80]
+math_score = [43,60,85,30,90]
+eng_score = [49,82,48,50,100]
+midterm_score = [kor_score, math_score, eng_score]
+
+student_score = [0,0,0,0,0]
+i = 0
+for subject in midterm_score:
+    print(subject)
+    for score in subject:
+        student_score[i] += score
+        print(student_score[i])
+        i += i
+    i = 0
+else:
+    a,b,c,d,e = student_score
+
+    
