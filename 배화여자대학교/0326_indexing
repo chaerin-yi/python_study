@@ -1,0 +1,58 @@
+colors = ['red', 'blue', 'green']
+print(colors[0])
+print(colors[1])
+print(colors[2])
+print(len(colors))
+
+print("===========")
+
+colors2 = ['orange', 'black', 'white']
+print(colors + colors2)
+print(len(colors))
+
+total_color = colors + colors2
+print(total_color)
+
+print("===========")
+
+print(colors * 2) # colors 리스트 2회 반복
+
+print("===========")
+
+# in 연산: 포함 여부를 확인하는 연산으로, 
+# 하나의 값이 해당 리스트에 들어있는지 확인할 수 있다
+print('blue' in colors2)
+
+print("===========")
+
+colors = ['red']
+colors.append('white')
+print(colors)
+
+print("===========")
+
+colors = ['blue']
+colors.extend(['black', 'green'])
+print(colors)
+
+print("===========")
+
+colors = ['red', 'blue']
+colors.insert(0, 'orange')
+print(colors)
+colors.remove('red')
+print(colors)
+
+print("===========")
+
+colors = ['red', 'black']
+colors[0] = 'orange'
+print(colors)
+del colors[1]
+print(colors)
+
+print("===========")
+
+t = [1, 2, 3]
+a, b, c = t
+print(t, a, b, c)
