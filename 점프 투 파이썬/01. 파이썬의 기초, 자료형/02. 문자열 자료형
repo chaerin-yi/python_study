@@ -1,0 +1,161 @@
+# 큰 따옴표 양쪽 둘러싸기
+"Hello World"
+# 작은 따옴표 양쪽 둘러싸기
+'Hello World'
+# 큰 따옴표 연속 3개씩 양쪽 둘러싸기
+"""Hello World"""
+# 작은 따옴표 연속 3개씩 양쪽 둘러싸기
+'''Hello World'''
+
+# 문자열에 작은 따옴표 포함 시키기
+food = "Python's favorite food is perl"
+print(food)
+
+# 문자열에 큰 따옴표 포함 시키기
+say = '"Hello my friend!"'
+print(say)
+
+# 백슬래시를 사용해서 작은 따옴표와 큰 따옴표를 문자열에 포함시키기
+food = 'Python\'s favorite food is perl'
+say = "\"Python is very easy.\"he says"
+print(food)
+print(say)
+
+# 여러 줄인 문자열을 변수에 대입하고 싶을 경우
+# 1. 줄을 바꾸기 위한 이스케이프 코드
+multiline = "Life id too short\nYou need python"
+print("multiline의 문자열  \n"+multiline)
+
+# 작은 따옴표나 큰 따옴표 3개씩 사용하기
+multiline1 = """
+Life is too short
+You need python
+"""
+print(multiline1)
+
+# 문자열 연산하기
+head = "Python"
+tail = " is fun"
+print(head+tail)
+
+# 문자열 곱하기
+a = "python"
+print(a * 2)
+
+# 문자열 곱하기 응용
+print("=" * 50)
+print("My program")
+print("=" * 50)
+
+
+# 문자열 길이 구하기
+a = "Life is too short"
+print(len(a))
+
+# 문자열 인덱싱
+indexing = "Life is short, You need Python"
+print(indexing[3]) # 파이썬은 숫자를 0부터 센다.
+
+# 문자열 인덱싱 활용하기
+indexing = "Life is short, You need Python"
+print(indexing[0])
+print(indexing[12])
+print(indexing[-1]) # 뒤에서부터 첫번째 문자
+
+# 문자열 슬라이싱
+a = "Life is short, You need Python"
+b = a[0] + a[1] + a[2] + a[3]
+print(b)
+print(a[0:4]) # 0번부터 4번까지
+print(a[5:8]) # 5번부터 8번까지
+print(a[0:]) # 0번부터 끝까지
+print(a[:9]) #처음부터 9번까지
+print(a[:]) # 시작부터 끝까지
+
+
+# 슬라이싱 응용
+text = "20220420Rainy"
+year = text[0:4]
+month = text[4:6]
+date = text[6:8]
+weather = text[8:]
+print("year: " + year + "년" + "\nmonth: "+ month + "월" +"\ndate: " + date + "일" + "\nweather: " + weather)
+
+# 문자열 포매팅
+print("I eat %d apples." %3)
+print("I eat %s apples." %"five")
+
+num = 3
+print("I eat %d apples." %num)
+
+# 두개 이상의 값 넣기
+num = 10
+day = "three"
+print("I ate %d apples. so I was sick for %s days." % (num, day))
+
+
+# 포맷 코드와 숫자 함께 사용하기
+print("%10s" % "hi")
+print("%-10sjane." % 'hi')
+print("%0.4f" % 3.42134234)
+
+
+# format 함수를 사용한 포매팅
+print("I eat {0} apples".format(3))
+print("I eat {0} apples".format("five"))
+
+# 2개 이상의 값 넣기
+numb = 10
+day = "three"
+print("I ate {0} apples. so I was sick for {1} days.".format(numb, day))
+
+# 이름으로 넣기 
+print("I ate {number} apples. so I was sick for {day} days.".format(number=10, day=3))
+
+# 왼쪽 정렬 
+print("{0:<10}".format("hi"))
+# 오른쪽 정렬
+print("{0:>10}".format("hi"))
+# 가운데 정렬
+print("{0:^10}".format("hi"))
+# 공백 채우기
+print("{0:=^10}".format("hi"))
+print("{0:!<10}".format("hi"))
+# 소수점 표현하기
+y = 0.4211512
+print("{0:0.4f}".format(y)) # 4번쨰 자리까지만 표시
+# { 또는 } 문자 표현하기
+print("{{ and }}".format())
+
+
+# 문자열 관련 함수들
+# 문자 개수 세기 (count)
+a = "hobby"
+print(a.count('b'))
+
+# 위치 알려주기1 (find)
+a = "Python is the best choice"
+print(a.find('b'))
+print(a.find('k'))
+
+# 위치 알려주기2 (index)
+a = "Life is too short"
+print(a.index('t'))
+
+# 문자열 삽입
+print(",".join('abcd'))
+
+# 소문자를 대문자로 바꾸기 (upper)
+a = "hi"
+print(a.upper())
+
+# 대문자를 소문자로 바꾸기
+a = "HI"
+print(a.lower())
+
+# 문자열 나누기 (split)
+a = "Life is too short"
+print(a.split())
+b = "a:b:c:d"
+print(b.split(':'))
+
