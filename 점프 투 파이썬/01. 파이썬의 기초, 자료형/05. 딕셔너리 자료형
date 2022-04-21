@@ -1,0 +1,54 @@
+# 딕셔너리의 예시
+dic = {'name':'pey', 'phone':'01099993333', 'birth':'1118'}
+
+a = {1:'hi'}
+a = {'a':[1,2,3]}
+
+# 딕셔너리 쌍 추가, 삭제하기
+a = {1:'a'}
+a[2] = 'b'
+print(a)
+
+a['name'] = 'pey'
+print(a) # 딕셔너리 a에 'name':'pay'라는 쌍이 추가됨
+
+a[3] = [1,2,3]
+print(a)
+
+# 딕셔너리 요소 삭제하기
+del a[1]
+print(a)
+
+# 딕셔너리를 사용하는 방법
+a = {"김연아":"피겨스케이팅", "류현진":"야구", "박지성":"축구", "귀도":"파이썬"}
+
+# Key 리스트 만들기
+a = {'name':'pey', 'phone':'01099993333', 'birth':'1118'}
+print(a.keys())
+
+for k in a.keys():
+    print(k)
+
+print(list(a.keys()))
+
+# Value 리스트 만들기
+print(a.values())
+
+# Key, Value 쌍 얻기
+print(a.items())
+
+# Key: Value 쌍 모두 지우기
+a.clear()
+print(a)
+
+# Key로 Value 얻기
+a = {'name':'pey', 'phone':'0119993323', 'birth': '1118'}
+print(a.get('name'))
+print(a.get('phone'))
+print(a.get('nokey'))
+print(a.get('foo', 'bar'))
+
+# 해당 Key가 딕셔너리 안에 있는지 조사하기 (in)
+a = {'name':'pey', 'phone':'01033336666', 'birth':'1118'}
+print('name' in a)
+print('email' in a)
